@@ -1,0 +1,17 @@
+version: '3'
+services:
+  demo-site.pv:
+    container_name: demo-site.pv
+    image: pagevamp/nginx-php7-fpm:7.2
+    restart: always
+    environment:
+      - VIRTUAL_HOST=demo-site.pv
+    volumes:
+      - ./:/var/www
+      - ./docker/sites/default.conf:/etc/nginx/sites-enabled/default
+      - ./docker/sites/php.ini:/etc/php/7.2/fpm/php.ini
+    networks:
+      - pagevamp
+networks:
+  pagevamp:
+    external: true
