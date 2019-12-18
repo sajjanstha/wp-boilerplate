@@ -3,3 +3,17 @@
 production-config.php
 local-config.php
 .idea
+
+# Don’t ignore plugins dir, but ignore everything inside
+!public/wp-content/plugins
+public/wp-content/plugins/*
+
+# Don’t ignore custom plugin
+!public/wp-content/themes/your-custom-plugin-name
+
+# Don’t ignore themes dir, but ignore everything inside
+!public/wp-content/themes
+public/wp-content/themes/*
+
+# Don’t ignore custom theme
+!public/wp-content/themes/your-custom-theme-name
