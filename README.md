@@ -36,7 +36,7 @@ This repo is meant to be used as a boilerplate for your new Wordpress Project. S
 ## Add Plugin as composer dependency
 The WordPress Packagist(https://wpackagist.org) site helps us out here by mirroring the WordPress plugin and theme directories as a Composer repository. 
 We can specify which plugins and themes we want to install in our composer.json file. Suppose you want to install 'Show Current Template' plugin then
-run this command inside your docker container `compose require wpackagist-plugin/show-current-template`
+run this command inside your docker container `composer require wpackagist-plugin/show-current-template`
 
 ## Caveat
 Your WordPress admin will now always have "/wp" in the URL. To remove it from the front site make sure the following options are set 
