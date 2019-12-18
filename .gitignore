@@ -4,6 +4,8 @@ production-config.php
 local-config.php
 .idea
 
+public/wp-content/uploads
+
 # Don’t ignore plugins dir, but ignore everything inside
 !public/wp-content/plugins
 public/wp-content/plugins/*

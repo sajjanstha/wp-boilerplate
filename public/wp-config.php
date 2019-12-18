@@ -1,16 +1,7 @@
 <?php
 ini_set( 'display_errors', 0 );
 
-// ===================================================
-// Load database info and local development parameters
-// ===================================================
-if ( file_exists( dirname( __FILE__ ) . '/../production-config.php' ) ) {
-    define( 'WP_LOCAL_DEV', false );
-    include( dirname( __FILE__ ) . '/../production-config.php' );
-} else {
-    define( 'WP_LOCAL_DEV', true );
-    include( dirname( __FILE__ ) . '/../local-config.php' );
-}
+define( 'WP_TABLE_PREFIX', 'wp_');
 
 // ========================
 // Custom Content Directory
@@ -41,10 +32,21 @@ define( 'WP_DEBUG', false );
 // =========================
 define( 'AUTOMATIC_UPDATER_DISABLED', false );
 
+// ===================================================
+// Load database info and local development parameters
+// ===================================================
+if ( file_exists( dirname( __FILE__ ) . '/../production-config.php' ) ) {
+    define( 'WP_LOCAL_DEV', false );
+    include( dirname( __FILE__ ) . '/../production-config.php' );
+} else {
+    define( 'WP_LOCAL_DEV', true );
+    include( dirname( __FILE__ ) . '/../local-config.php' );
+}
+
 // =======================
 // Load WordPress Settings
 // =======================
-$table_prefix  = 'wp_';
+$table_prefix  = WP_TABLE_PREFIX;
 
 if ( ! defined( 'ABSPATH' ) ) {
     define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );

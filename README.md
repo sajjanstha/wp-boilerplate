@@ -22,10 +22,14 @@ This repo is meant to be used as a boilerplate for your new Wordpress Project. S
 * Extract zip and Goto project folder: `cd [foldername]`
 * Setup your Own git repo: `git init && git remote add origin git@github.com:pagevamp/<project-name>.git"`
 * Push your first commit: `git commit -am "wordpress boilerplate" && git push -u origin master`
+* Create new database for your wordpress
 * Configure your wordpress : `cp local-config.sample.php local-config.php` (`cp local-config.sample.php production-config.php` for production), then change the config variables to match your settings
+* Put your database credentials in local-config.php or production-config.php file
 * Initialize docker: `sudo docker-compose up -d`
 * Open bash terminal inside container: `sudo docker exec -it <demo-site.pv> /bin/bash`
 * Install dependencies: `composer install`
+* Add your preferred local domain name to hosts file (for example, demo-site.local) : `sudo vim /etc/hosts`
+* Visit your project url (demo-site.local) in web browser and complete your Wordpress Installation
 * That's it!!
 * Enjoy building your Wordpress themes with Ease
 
